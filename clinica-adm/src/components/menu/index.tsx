@@ -1,5 +1,7 @@
 import React from "react";
 import * as Nav from './style';
+import Logo2 from '../../assets/logo climed 2.png';
+
 
 export default function Menu() {
 
@@ -7,7 +9,7 @@ export default function Menu() {
 
     return (
         <Nav.MenuContainer>
-            aaaa
+            <Nav.ImageLogo src={Logo2} id="logo"/>
 
         </Nav.MenuContainer>
     );

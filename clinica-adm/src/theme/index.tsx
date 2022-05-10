@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import Menu from "../menu";
+import Menu from "../components/menu";
 import * as C from './style';
 
 type Props = {
