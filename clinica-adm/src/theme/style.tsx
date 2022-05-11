@@ -9,4 +9,5 @@ display: flex;
 export const Page = styled.div`
     flex: 1;
     display: flex;
+    padding: 3vw;
 `

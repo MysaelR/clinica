@@ -6,6 +6,7 @@ import Logo from '../../assets/logo climed.png';
 export const DescriptionOption = styled.p`
     margin-left: 1vw;
     display: none;
+    color: #18181B;
    
 `
 
@@ -15,7 +16,7 @@ export const MenuContainer = styled.div`
     background-color: #1DB954;
 
     :hover{
-        transition: 0.05s ease-in;
+        transition: 0.1s ease-in;
         width: 10vw;
 
        ${DescriptionOption}{
@@ -27,6 +28,7 @@ export const MenuContainer = styled.div`
 `
 
 export const Business = styled.p`
+
 `
 
 export const ImageLogo = styled.img`
@@ -39,9 +41,9 @@ export const MenuOptions = styled.div`
     margin-top: 5vh;
     display: grid;
 
-
     #image-option{
         margin-left: 5px;
+        color: #18181B;
     }
 `
 
@@ -52,11 +54,27 @@ export const Option = styled.div`
     display: flex;
     align-items: center;
     padding: 1vh 0;
+    cursor: pointer;
+
+
+ 
+    
 
 
     :hover{
         //background-color: #229c4d;
-        background-color: #2feb71;
-        opacity: 0.5;
+        //background-color: #2feb71;
+        transition: 0.2s ease-in;
+        background-color: #199c47;
+        padding-left: 10px;
+
+        #image-option{
+        color: white;
+        }
+
+        ${DescriptionOption}{
+            color: white;
+        }
+       
     }
 `

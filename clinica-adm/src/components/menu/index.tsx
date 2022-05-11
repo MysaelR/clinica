@@ -21,8 +21,26 @@ export default function Menu() {
                     </Nav.DescriptionOption>
                 </Nav.Option>
 
-                <Pill size={32} />
-                <AddressBook size={32} />
+                <Nav.Option>
+
+                    <Pill size={32} id="image-option" />
+
+                    <Nav.DescriptionOption>
+                        Medicamentos
+                    </Nav.DescriptionOption>
+                </Nav.Option>
+
+                <Nav.Option>
+
+                    <AddressBook size={32} id="image-option" />
+
+                    <Nav.DescriptionOption>
+                        Fichas
+                    </Nav.DescriptionOption>
+                </Nav.Option>
+
+
+
             </Nav.MenuOptions>
 
         </Nav.MenuContainer >

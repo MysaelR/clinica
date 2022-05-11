@@ -1,4 +1,5 @@
 import React from 'react';
+import AppProvider from './contexts';
 import Home from './pages/home';
 import { Router } from './routes/router';
 
@@ -7,7 +8,10 @@ function App() {
     /*    <div className="App">
    
        </div> */
-    <Router />
+    <AppProvider>
+      <Router />
+    </AppProvider>
+
   );
 }
 
