@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { LanguageActions, useLanguage } from "../../contexts/multi-languages/languages";
 
 
-interface Language {
+export interface Language {
     pt: string;
     en?: string | any;
     es?: string | any;

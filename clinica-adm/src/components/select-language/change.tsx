@@ -50,57 +50,62 @@ export default function SelectLanguage() {
     return (
 
         <div>
-            <ChangeLanguage.ContainerDropLanguage onClick={() => {setLanguageVisible(!languageVisible)}}>
+            <ChangeLanguage.ContainerDropLanguage onClick={() => { setLanguageVisible(!languageVisible) }}>
                 <Translate size={32} id="translate" />
             </ChangeLanguage.ContainerDropLanguage>
-            <ChangeLanguage.DropLanguagePt
+            <ChangeLanguage.DropLanguage
                 display={languageVisible}
-    
-                onClick={() => {handleSetLanguagePt()}}>
+                top={3}
+                onClick={() => { handleSetLanguagePt() }}>
                 <p>
                     PT
                 </p>
-            </ChangeLanguage.DropLanguagePt>
-            <ChangeLanguage.DropLanguageEn
+            </ChangeLanguage.DropLanguage>
+            <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                onClick={() => {handleSetLanguageEn()}}
-                >
+                top={7}
+                onClick={() => { handleSetLanguageEn() }}
+            >
                 <p>
                     EN
                 </p>
-            </ChangeLanguage.DropLanguageEn >
-            <ChangeLanguage.DropLanguageEs
+            </ChangeLanguage.DropLanguage >
+            <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                onClick={() => {handleSetLanguageEs()}}
-                >
+                top={11}
+                onClick={() => { handleSetLanguageEs() }}
+            >
                 <p>
                     ES
                 </p>
-            </ChangeLanguage.DropLanguageEs>
-            <ChangeLanguage.DropLanguageFr
+            </ChangeLanguage.DropLanguage>
+            <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                onClick={() => {handleSetLanguageFr()}}
-                >
+                top={15}
+                onClick={() => { handleSetLanguageFr() }}
+            >
                 <p>
                     FR
                 </p>
-            </ChangeLanguage.DropLanguageFr>
-            <ChangeLanguage.DropLanguageIt
+            </ChangeLanguage.DropLanguage>
+            <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                onClick={() => {handleSetLanguageIt()}}
-                >
+                top={19}
+                onClick={() => { handleSetLanguageIt() }}
+            >
                 <p>
                     IT
                 </p>
-            </ChangeLanguage.DropLanguageIt>
-            <ChangeLanguage.DropLanguageDe
+            </ChangeLanguage.DropLanguage>
+            <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                onClick={() => {handleSetLanguageDe()}}
-                >
+                top={23}
+                onClick={() => { handleSetLanguageDe() }}
+            >
                 <p>
                     DE
                 </p>
-            </ChangeLanguage.DropLanguageDe>
+            </ChangeLanguage.DropLanguage>
         </div>
 
 

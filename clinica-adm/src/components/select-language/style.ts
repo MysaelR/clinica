@@ -20,6 +20,7 @@ export const ContainerDropLanguage= styled.div`
     align-items: center;
     border-radius: 100px;
     cursor: pointer;
+    z-index: 1;
 
     #translate{
         margin: 0 auto;
@@ -31,26 +32,25 @@ export const ContainerDropLanguage= styled.div`
 
         }
     }
+    
 `
-export const DropLanguagePt = styled.div<ChangeLanguageButtonI>`
+export const DropLanguage = styled.div<ChangeLanguageButtonI>`
     position: absolute;
-    top: 6vw
-    right: 2vw;
     background-color: #1DB954;
+    right: 2.05vw;
     text-align: center;
     display: flex;
     align-items: center;
-    width: 3vw;
-    height: 3vw;
+    width: 2.9vw;
+    height: 2.9vw;
     border-radius: 100px;
     cursor: pointer;
-    transform: translateY(${(p: ChangeLanguageButtonI) => p.top}vw) to 20vw;
-    transition: 1s;
-    transition-delay: 0.5s;
-    display: ${(p: ChangeLanguageButtonI) => p.display? "flex" : "none"};
-
-
- 
+    transition: margin 700ms;
+    //transform: translateY(${(p: ChangeLanguageButtonI) => p.top}vw);
+    margin-top: ${(p: ChangeLanguageButtonI) => p.display === false? -0.95 : p.top}vw;
+    
+   /*  display: ${(p: ChangeLanguageButtonI) => p.display? "flex" : "none"}; */
+    z-index: 0;
 
     p{
         font-size: 1.6rem;
@@ -63,137 +63,6 @@ export const DropLanguagePt = styled.div<ChangeLanguageButtonI>`
         }
     }
     
-`
-
-export const DropLanguageEn = styled.div`
-    position: absolute;
-    
-    top: 10vw;
-    right: 2vw;
-    background-color: #1DB954;
-    display: flex;
-    align-items: center;
-    width: 3vw;
-    height: 3vw;
-    border-radius: 100px;
-    cursor: pointer;
-
-    display: ${(p: ChangeLanguageButtonI) => p.display? "flex" : "none"};
-
-    p{
-        font-size: 1.6rem;
-        font-weight: lighter;
-        color: black;
-        margin: 0 auto;
-
-        :hover{
-            color: white;
-        }
-    }
-    
-`
-/*
-    it = italian*/
-
-export const DropLanguageEs = styled.div`
-    position: absolute;
-    top: 14vw;
-    right: 2vw;
-    background-color: #1DB954;
-    display: flex;
-    align-items: center;
-    width: 3vw;
-    height: 3vw;
-    border-radius: 100px;
-    cursor: pointer;
-    display: ${(p: ChangeLanguageButtonI) => p.display? "flex" : "none"};
-
-    p{
-        font-size: 1.6rem;
-        font-weight: lighter;
-        color: black;
-        margin: 0 auto;
-
-        :hover{
-            color: white;
-        }
-    }
-
-`
-
-export const DropLanguageFr = styled.div`
-    position: absolute;
-    top: 18vw;
-    right: 2vw;
-    background-color: #1DB954;
-    display: flex;
-    align-items: center;
-    width: 3vw;
-    height: 3vw;
-    border-radius: 100px;
-    cursor: pointer;
-display: ${(p: ChangeLanguageButtonI) => p.display? "flex" : "none"};
-    p{
-        font-size: 1.6rem;
-        font-weight: lighter;
-        color: black;
-        margin: 0 auto;
-
-        :hover{
-            color: white;
-        }
-    }
-
-`
-
-export const DropLanguageDe = styled.div`
-    position: absolute;
-    top: 22vw;
-    right: 2vw;
-    background-color: #1DB954;
-    display: flex;
-    align-items: center;
-    width: 3vw;
-    height: 3vw;
-    border-radius: 100px;
-    cursor: pointer;
-    display: ${(p: ChangeLanguageButtonI) => p.display? "flex" : "none"};
-    p{
-        font-size: 1.6rem;
-        font-weight: lighter;
-        color: black;
-        margin: 0 auto;
-
-        :hover{
-            color: white;
-        }
-    }
-
-`
-export const DropLanguageIt = styled.div`
-    position: absolute;
-    top: 26vw;
-    right: 2vw;
-    background-color: #1DB954;
-    display: flex;
-    align-items: center;
-    width: 3vw;
-    height: 3vw;
-    border-radius: 100px;
-    cursor: pointer;
-    display: ${(p: ChangeLanguageButtonI) => p.display? "flex" : "none"};
-
-    p{
-        font-size: 1.6rem;
-        font-weight: lighter;
-        color: black;
-        margin: 0 auto;
-
-        :hover{
-            color: white;
-        }
-    }
-
 `
 
 

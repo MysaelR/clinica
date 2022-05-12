@@ -10,7 +10,9 @@ export default function Menu() {
     return (
         <Nav.MenuContainer>
             <Nav.ImageLogo src={Logo2} id="logo" />
-
+            <Nav.Business>
+                CLIMED
+            </Nav.Business>
             <Nav.MenuOptions>
                 <Nav.Option>
 

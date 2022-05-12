@@ -7,9 +7,20 @@ export const DescriptionOption = styled.p`
     margin-left: 1vw;
     display: none;
     color: #18181B;
+    font-size: 1rem;
+
+    @media only screen and (max-width: 1600px) {
+        font-size: 0.8rem;
+    }
    
 `
-
+export const Business = styled.p`
+    color: rgb(56,103,202);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    display: none;
+`
 export const MenuContainer = styled.div`
     height: 100vh;
     width: 3vw;
@@ -22,14 +33,15 @@ export const MenuContainer = styled.div`
        ${DescriptionOption}{
             display: block;
         }
+        ${Business}{
+            display: block;
+        }
         
         
     }
 `
 
-export const Business = styled.p`
 
-`
 
 export const ImageLogo = styled.img`
     padding: 5%;
@@ -55,7 +67,7 @@ export const Option = styled.div`
     align-items: center;
     padding: 1vh 0;
     cursor: pointer;
-
+    max-width: 100%;
 
  
     
@@ -75,6 +87,7 @@ export const Option = styled.div`
         ${DescriptionOption}{
             color: white;
         }
+        
        
     }
 `
