@@ -9,7 +9,7 @@ export default function Home() {
 
     return (
         <Theme>
-            <ReturnLanguage pt="Teste" en="Test" es="Testo" de="Ahue" />
+            <ReturnLanguage pt="Teste" en="Test" es="Testo" de="Ahue" fr="bonjour" it="pizza"/>
 
             <SelectLanguage />
         </Theme>

@@ -6,7 +6,7 @@ export type LanguageI = {
 }
 
 /*
-    pt-br = brazilian portuguese
+    pt = brazilian portuguese
     en = english
     es = spanish
     fr = french
@@ -28,7 +28,7 @@ type LanguageProviderProps = {
 }
 
 const initialData: LanguageI = { //dados iniciais
-    language: "en"
+    language: "pt"
 }
 
 
