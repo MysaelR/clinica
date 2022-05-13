@@ -1,7 +1,5 @@
-import styled, {css} from "styled-components";
 import { Translate } from "phosphor-react";
-
-
+import styled, { css } from "styled-components";
 
 interface ChangeLanguageButtonI{
     display?: boolean;

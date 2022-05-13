@@ -1,7 +1,6 @@
-import { url } from "inspector";
-import styled, {css} from "styled-components";
 import Logo from '../../assets/logo climed.png';
-
+import { url } from "inspector";
+import styled, { css } from "styled-components";
 
 export const DescriptionOption = styled.p`
     margin-left: 1vw;
