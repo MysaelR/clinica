@@ -1,7 +1,8 @@
+import { AddressBook, House, Pill, Palette } from "phosphor-react";
 import React from "react";
-import * as Nav from './style';
+
 import Logo2 from '../../assets/menu/logo climed 2.png';
-import { House, Pill, AddressBook } from "phosphor-react";
+import * as Nav from './style';
 
 export default function Menu() {
 
@@ -9,10 +10,13 @@ export default function Menu() {
 
     return (
         <Nav.MenuContainer>
-            <Nav.ImageLogo src={Logo2} id="logo" />
-            <Nav.Business>
-                CLIMED
-            </Nav.Business>
+            <Nav.LogoContainer>
+                <Nav.ImageLogo src={Logo2} id="logo" />
+                <Nav.Business>
+                    CLIMED
+                </Nav.Business>
+            </Nav.LogoContainer>
+
             <Nav.MenuOptions>
                 <Nav.Option>
 
@@ -40,6 +44,17 @@ export default function Menu() {
                         Fichas
                     </Nav.DescriptionOption>
                 </Nav.Option>
+
+
+                <Nav.Option>
+
+                    <Palette size={32} id="image-option" />
+
+                    <Nav.DescriptionOption>
+                        Tema
+                    </Nav.DescriptionOption>
+                </Nav.Option>
+
 
 
 

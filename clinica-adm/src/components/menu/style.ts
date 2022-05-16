@@ -5,8 +5,11 @@ import styled, { css } from "styled-components";
 export const DescriptionOption = styled.p`
     margin-left: 1vw;
     display: none;
-    color: #18181B;
+    color: ${({ theme }) => theme.textColorDesableTheme};
     font-size: 1rem;
+    white-space: nowrap;
+   overflow: hidden !important;
+   text-overflow: ellipsis;
 
     @media only screen and (max-width: 1600px) {
         font-size: 0.8rem;
@@ -19,18 +22,19 @@ export const Business = styled.p`
     font-weight: bolder;
     font-size: 2rem;
     display: none;
+    position: relative;
 `
 export const MenuContainer = styled.div`
     height: 100vh;
     width: 3vw;
-    background-color: #1DB954;
+    background-color:  ${({ theme }) => theme.menuContainerTheme};
 
     :hover{
-        transition: 0.1s ease-in;
+        transition: 0.1s ease-in; //Aumentar valor para melhorar o menu
         width: 10vw;
 
        ${DescriptionOption}{
-            display: block;
+            display: inline-block;;
         }
         ${Business}{
             display: block;
@@ -47,14 +51,18 @@ export const ImageLogo = styled.img`
     width: 90%;
 
 `
+export const LogoContainer = styled.div`
+    height: 25vh;
+`
 
 export const MenuOptions = styled.div`
     margin-top: 5vh;
     display: grid;
+    
 
     #image-option{
         margin-left: 5px;
-        color: #18181B;
+        color: ${({ theme }) => theme.iconDesableTheme};
     }
 `
 
@@ -76,11 +84,11 @@ export const Option = styled.div`
         //background-color: #229c4d;
         //background-color: #2feb71;
         transition: 0.2s ease-in;
-        background-color: #199c47;
+        background-color: ${({ theme }) => theme.navegateOptionEnableTheme};
         padding-left: 10px;
 
         #image-option{
-        color: white;
+            color: ${({ theme }) => theme.iconEnableTheme};
         }
 
         ${DescriptionOption}{
