@@ -1,6 +1,6 @@
 import { AddressBook, House, Pill, Palette } from "phosphor-react";
 import React from "react";
-
+import { ReactComponent as Logo } from '../../assets/menu/logo climed.svg';
 import Logo2 from '../../assets/menu/logo climed 2.png';
 import * as Nav from './style';
 
@@ -11,7 +11,12 @@ export default function Menu() {
     return (
         <Nav.MenuContainer>
             <Nav.LogoContainer>
-                <Nav.ImageLogo src={Logo2} id="logo" />
+                <Nav.ImageLogo src={Logo2} />
+
+
+                {/* <Nav.ImageLogo src={Logo} id="logo" /> */}
+                {/*          <Nav.BusinessLogo /> */}
+                {/* <img src={Logo} /> */}
                 <Nav.Business>
                     CLIMED
                 </Nav.Business>

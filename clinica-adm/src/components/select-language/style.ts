@@ -11,7 +11,7 @@ export const ContainerDropLanguage= styled.div`
     position: absolute;
     top: 2vw;
     right: 2vw;
-    background-color: #1DB954;
+    background-color:  ${({ theme }) => theme.menuContainerTheme};
     width: 3vw;
     height: 3vw;
     display: flex;
@@ -34,7 +34,7 @@ export const ContainerDropLanguage= styled.div`
 `
 export const DropLanguage = styled.div<ChangeLanguageButtonI>`
     position: absolute;
-    background-color: #1DB954;
+    background-color: ${({ theme }) => theme.menuContainerTheme};
     right: 2.05vw;
     text-align: center;
     display: flex;
