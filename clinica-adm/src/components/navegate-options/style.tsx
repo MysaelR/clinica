@@ -11,18 +11,19 @@ export const ContainerNavegateOption = styled.div`
     height: 12vw;
     border-radius: 30px;
     cursor: pointer;
-    background-color: azure;
+    background-color: ${({ theme }) => theme.menuContainerTheme};
+    color: ${({ theme }) => theme.navegateOptionEnableTheme};
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
  
 
 
     .navegate-opt-icon{
-        color: black;
+        color: ${({ theme }) => theme.navegateOptionEnableTheme};
         width: 4vw;
         height: 4vw;
 
@@ -34,13 +35,13 @@ export const ContainerNavegateOption = styled.div`
     :hover{
         transition: box-shadow  0.2s;
         box-shadow: 0 3px 0.5em #00acee;
-        color: #00acee;
-
+        background-color: ${({ theme }) => theme.navegateOptionEnableTheme};
+        color: white;
 
 
         .navegate-opt-icon{
             transition: color 0.2s;
-            color: #00acee;
+            color: white;
 
 
     }

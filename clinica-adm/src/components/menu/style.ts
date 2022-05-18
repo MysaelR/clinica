@@ -5,10 +5,12 @@ import { ReactComponent as Logo } from '../../assets/menu/logo climed.svg';
 
 
 export const BusinessLogo = styled(Logo)`
-    position: relative;
     top: 0;
-    fill: blue;
-    width: 5vw;
+    fill: ${({ theme }) => theme.iconDesableTheme};
+    width: 90%;
+    height: 50%;
+    padding: 5%;
+
 `
 
 export const MenuOptions = styled.div`
@@ -39,7 +41,7 @@ export const DescriptionOption = styled.p` //Option Text
    
 `
 export const Business = styled.p` //Business name
-    color: rgb(56,103,202);
+    color: ${({ theme }) => theme.iconDesableTheme};
     text-align: center;
     font-weight: bolder;
     font-size: 2rem;
@@ -75,16 +77,10 @@ export const ImageLogo = styled.img`
     padding: 5%;
     width: 90%;
 
-    svg{
-
-        path{
-          fill: gray;  
-        }
-        
-    }
 
 `
 export const LogoContainer = styled.div`
+    margin-top: 0px;
     height: 25vh;
 `
 
@@ -123,3 +119,5 @@ export const Option = styled.div`
        
     }
 `
+
+

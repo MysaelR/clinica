@@ -2,6 +2,8 @@ import React, { ReactNode } from "react";
 import Menu from "../components/menu";
 import * as C from './style';
 
+
+
 type Props = {
     children: ReactNode;
 }

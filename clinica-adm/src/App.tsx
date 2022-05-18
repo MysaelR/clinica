@@ -4,6 +4,7 @@ import Home from './pages/home';
 import { Router } from './routes/router';
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from './components/global-style/themes';
+import { GlobalStyles } from './components/global-style/globalStyles';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
        </div> */
 
     <AppProvider>
+      <GlobalStyles />
       <Router />
     </AppProvider>
   );
