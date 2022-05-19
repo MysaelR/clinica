@@ -6,6 +6,7 @@ import * as Nav from './style';
 import { useDarkMode } from "../global-style/globalStyles";
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { ToogleActions, useToogle } from "../../contexts/toogle-theme/toogle";
+import { MarginSpaceStyle } from "../../styles/global";
 
 
 
@@ -78,6 +79,8 @@ export default function Menu() {
                         Tema
                     </Nav.DescriptionOption>
                 </Nav.Option>
+
+
 
 
 

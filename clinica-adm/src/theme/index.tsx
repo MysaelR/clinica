@@ -14,7 +14,7 @@ export const Theme = ({ children }: Props) => {
 
 
         <C.Container>
-            <Menu />
+            {/* <Menu /> */}
             <C.Page>
                 {children}
             </C.Page>

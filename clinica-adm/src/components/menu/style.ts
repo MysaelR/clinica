@@ -50,9 +50,13 @@ export const Business = styled.p` //Business name
     position: relative;
 `
 export const MenuContainer = styled.div`
+position: fixed;
+left: 0;
+top: 0;
     height: 100vh;
     width: 3vw;
     background-color:  ${({ theme }) => theme.menuContainerTheme};
+    border-right: 2px solid ${({ theme }) => theme.borderContainerTheme};
 
     :hover{
         transition: 0.2s ease-in; //Aumentar valor para melhorar o menu

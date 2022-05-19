@@ -11,12 +11,17 @@ export default function Home() {
 
     return (
         <Theme>
-
             <HomeStyle.PrincipalContainerHome>
                 <NavegateOption
                     language={{ pt: "Medicamentos", en: "Medicines", es: "Medicamentos", fr: "Médicaments", it: "Medicinali", de: "Medikamente" }}
                 >
                     <Pill className="navegate-opt-icon" />
+                </NavegateOption>
+
+                <NavegateOption
+                    language={{ pt: "Fichas", en: "Files", es: "Archivos", fr: "Des dossiers", it: "File", de: "Dateien" }}
+                >
+                    <AddressBook className="navegate-opt-icon" />
                 </NavegateOption>
 
                 {/* <NavegateOption
@@ -28,6 +33,7 @@ export default function Home() {
 
                 <SelectLanguage />
             </HomeStyle.PrincipalContainerHome>
+
 
         </Theme>
     );

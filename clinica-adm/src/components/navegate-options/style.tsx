@@ -8,22 +8,23 @@ export const ContainerNavegateOption = styled.div`
     flex-wrap: wrap; */
     padding: 1vw;
     width: 10vw;
-    height: 12vw;
+    height: 25vh;
     border-radius: 30px;
     cursor: pointer;
-    background-color: ${({ theme }) => theme.menuContainerTheme};
-    color: ${({ theme }) => theme.navegateOptionEnableTheme};
+    background-color: ${({ theme }) => theme.navageOptionDesableTheme};
+    color: ${({ theme }) => theme.navegateOptionsIconsAndTextDesable};
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
     font-size: 1.3rem;
+    margin-left: 2vw;
  
 
 
     .navegate-opt-icon{
-        color: ${({ theme }) => theme.navegateOptionEnableTheme};
+        color: ${({ theme }) => theme.navegateOptionsIconsAndTextDesable};
         width: 4vw;
         height: 4vw;
 
@@ -38,10 +39,9 @@ export const ContainerNavegateOption = styled.div`
         background-color: ${({ theme }) => theme.navegateOptionEnableTheme};
         color: white;
 
-
         .navegate-opt-icon{
             transition: color 0.2s;
-            color: white;
+            color: ${({ theme }) => theme.navegateOptionsIconsAndTextEnable};
 
 
     }

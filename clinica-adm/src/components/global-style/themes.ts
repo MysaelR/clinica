@@ -2,20 +2,26 @@
 export const lightTheme = {
     backgroundTheme: '#f8f8f8',
     menuContainerTheme: '#28a9e0',
+    borderContainerTheme: '#1d6180',
     navageOptionDesableTheme: '#28a9e0',
     navegateOptionEnableTheme: '#1d6180',
+    navegateOptionsIconsAndTextEnable: '#fff',
+    navegateOptionsIconsAndTextDesable: '#1d6180',
     iconEnableTheme: '#28a9e0',
     iconDesableTheme: '#1d6180',
     textColorDesableTheme: '#baeafe',
     textColorEnableTheme: '#fff'
-
+    
 }
 
 export const darkTheme = {
     backgroundTheme: '#15202c',
     menuContainerTheme: '#15202c',
-    navageOptionDesableTheme: '#15202c',
+    borderContainerTheme: '#315568',
+    navageOptionDesableTheme: '#315568',
     navegateOptionEnableTheme: '#192734',
+    navegateOptionsIconsAndTextEnable: '#fff',
+    navegateOptionsIconsAndTextDesable: '#FFF',
     iconEnableTheme: '#f8ffff',
     iconDesableTheme: '#f8ffff',
     textColorDesableTheme: '#fff',
