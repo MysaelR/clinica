@@ -56,6 +56,10 @@ export const DropLanguage = styled.div<ChangeLanguageButtonI>`
         background-color:  ${({ theme }) => theme.navegateOptionEnableTheme};
         transition: box-shadow  0.2s;
         box-shadow: 0 3px 0.5em #00acee;
+
+        p{
+            color: ${({ theme }) => theme.navegateOptionsIconsAndTextEnable};
+        }
     }
 
     p{
@@ -64,9 +68,7 @@ export const DropLanguage = styled.div<ChangeLanguageButtonI>`
         color: ${({ theme }) => theme.navegateOptionsIconsAndTextDesable};
         margin: 0 auto;
 
-        :hover{
-            color: ${({ theme }) => theme.navegateOptionsIconsAndTextEnable};
-        }
+       
     }
     
 `

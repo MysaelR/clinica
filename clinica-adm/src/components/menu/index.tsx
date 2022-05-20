@@ -7,6 +7,7 @@ import { useDarkMode } from "../global-style/globalStyles";
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { ToogleActions, useToogle } from "../../contexts/toogle-theme/toogle";
 import { MarginSpaceStyle } from "../../styles/global";
+import ReturnLanguage from "../select-language";
 
 
 
@@ -57,7 +58,7 @@ export default function Menu() {
                     <Pill size={32} id="image-option" />
 
                     <Nav.DescriptionOption>
-                        Medicamentos
+                        <ReturnLanguage pt={"Medicamentos"} en={"Medicines"} es={"Medicamentos"} de={"Medikamente"} fr={"Médicaments"} it={"Medicinali"} />
                     </Nav.DescriptionOption>
                 </Nav.Option>
 
@@ -66,7 +67,7 @@ export default function Menu() {
                     <AddressBook size={32} id="image-option" />
 
                     <Nav.DescriptionOption>
-                        Fichas
+                        <ReturnLanguage pt={"Fichas"} en={"Files"} es={"Archivos"} de={"Dateien"} fr={"Des dossiers"} it={"File"} />
                     </Nav.DescriptionOption>
                 </Nav.Option>
 
@@ -76,7 +77,7 @@ export default function Menu() {
                     <Palette size={32} id="image-option" />
 
                     <Nav.DescriptionOption>
-                        Tema
+                        <ReturnLanguage pt={"Tema"} en={"Theme"} es={"Temática"} de={"Thema"} fr={"Thème"} it={"Tema"} />
                     </Nav.DescriptionOption>
                 </Nav.Option>
 
