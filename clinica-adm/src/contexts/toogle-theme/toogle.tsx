@@ -21,7 +21,7 @@ type ToogleProviderProps = {
 }
 
 const initialData: ToogleI = { //dados iniciais
-    toogleValue: true
+    toogleValue: false
 }
 
 // Context
