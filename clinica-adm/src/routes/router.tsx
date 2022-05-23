@@ -5,31 +5,48 @@ import Login from "../pages/login";
 
 
 export const Router = () => {
-    
+    { console.log(window.location.href) }
 
     return (
         <BrowserRouter>
-        <Menu />
-                        <Routes>
-                            <Route path="/
-                            " element={<Home />} />
-                        </Routes>
+
+            {window.location.href === 'http://localhost:3000/' ?
+
+                (<Routes>
+                    <Route path="/" element={<Login />} />
+                </Routes>) :
+
+                (<> <Menu />
+                    <Routes>
+                        <Route path="/home" element={<Home />} />
+                    </Routes></>)
+
+
+
+
+            }
+            {/* <Menu />
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes> */}
+
+
             {/* {
-                
-                location.pathname != '/'?
+
+                window.location.href != '/' ?
                     <>
-                        <Menu />
+                        ( <Menu />
                         <Routes>
                             <Route path="/home" element={<Home />} />
-                        </Routes>
+                        </Routes>)
                     </>
 
-                :
-                    <Routes>
+                    :
+                    (<Routes>
                         <Route path="/" element={<Login />} />
-                    </Routes>
+                    </Routes>)
             } */}
-           
+
         </BrowserRouter>
     );
 };
