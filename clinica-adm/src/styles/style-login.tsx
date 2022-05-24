@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { ReactComponent as Logo } from '../assets/menu/logo climed.svg';
+import TextInput from "../components/input/text";
+import { Form } from '@unform/web';
 
+
+interface InputControllI {
+    top?: number
+}
 
 export const PrincipalDivLogin = styled.div`
     position: relative;
@@ -17,29 +23,88 @@ export const ContainerLogin = styled.div`
     width: 25vw;
     height: 60vh;
     border-radius: 15px;
-    background-color: ${({ theme }) => theme.menuContainerTheme};
+    border: 1px solid lightgray;
+    background-color: ${({ theme }) => theme.backgroundTheme};
+    flex-direction: column;
 `
 export const Header = styled.div`
     position: relative;
     z-index: 1;
-    top: 0;
-
-    max-height: 25vh;
+    top: 1vh;
+    max-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 `
 
 export const BusinessLogo = styled(Logo)`
-    position: absolute;
-    top: 0;
+    position: relative;
+    padding: 0;
     fill: ${({ theme }) => theme.iconDesableTheme};
     width: 3vw;
 
 `
 export const Business = styled.p`
-    top: 0;
-    position: absolute;
+    position: relative;
     color: ${({ theme }) => theme.iconDesableTheme};
     font-weight: bolder;
     font-size: 2rem;
+`
 
+export const Body = styled.div`
+    position: relative;
+    margin-top: 5vh;
+    height: 45vh;
+
+    display: flex;
+
+    flex-direction: column;
+`
+
+export const StyledForm = styled(Form)`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+
+`
+
+export const StyledTextInput = styled(TextInput) <InputControllI>`
+
+    position: relative;
+
+    border-radius: 5px;
+    background-color: none;
+    margin-top: ${(p: InputControllI) => p.top}vh;
+    
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding-top: 2vh;
+    padding-left: 2vw; 
+
+    :focus{
+        background-color: lightgray;
+        outline: 0;
+    }
+    
+`
+
+export const SubmitButtonLogin = styled.button`
+    margin-top: 10vh;
+    cursor: pointer;
+    padding: 0.5vw 8vh;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    background-color: ${({ theme }) => theme.iconDesableTheme};
+
+    :hover{
+        background-color: ${({ theme }) => theme.iconEnableTheme};
+    }
 
 `

@@ -50,9 +50,9 @@ export const Business = styled.p` //Business name
     position: relative;
 `
 export const MenuContainer = styled.div`
-position: fixed;
-left: 0;
-top: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
     height: 100vh;
     width: 3vw;
     background-color:  ${({ theme }) => theme.menuContainerTheme};
@@ -70,7 +70,6 @@ top: 0;
         ${Business}{
             display: block;
         }
-        
         
     }
 `
