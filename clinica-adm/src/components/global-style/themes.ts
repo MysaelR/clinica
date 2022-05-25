@@ -2,13 +2,14 @@
 export const lightTheme = {
     backgroundTheme: '#f8f8f8',
     menuContainerTheme: '#28a9e0',
-    borderContainerTheme: '#1d6180',
+    borderContainerTheme: '#123A4D',
     navageOptionDesableTheme: '#28a9e0',
-    navegateOptionEnableTheme: '#1d6180',
+    navegateOptionEnableTheme: '#123A4D',
     navegateOptionsIconsAndTextEnable: '#fff',
-    navegateOptionsIconsAndTextDesable: '#1d6180',
+    navegateOptionsIconsAndTextDesable: '#123A4D',
     iconEnableTheme: '#28a9e0',
-    iconDesableTheme: '#1d6180',
+    iconDesableTheme: '#123A4D',
+    //iconDesableTheme: '#1d6180',
     textColorDesableTheme: '#baeafe',
     textColorEnableTheme: '#fff'
     

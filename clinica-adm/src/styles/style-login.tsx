@@ -80,6 +80,7 @@ export const StyledTextInput = styled(TextInput) <InputControllI>`
     border-radius: 5px;
     background-color: none;
     margin-top: ${(p: InputControllI) => p.top}vh;
+    color: black;
     
     border: none;
     border-bottom: 1px solid lightgray;

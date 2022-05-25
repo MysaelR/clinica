@@ -3,7 +3,8 @@ import { useLocation } from "react-router-dom";
 import * as LoginStyle from "../styles/style-login";
 import SignInGoogle from '../assets/login/signin.svg';
 import { useField, SubmitHandler, FormHandles } from '@unform/core';
-
+import * as Yup from 'yup';
+import ReturnLanguage from "../components/select-language";
 
 interface FormData {
     email: string;
@@ -17,8 +18,27 @@ export default function Login() {
 
     const formRef = useRef<FormHandles>(null);
 
-    const handleSubmit: SubmitHandler<FormData> = data => {
-        console.log(formRef)
+    const handleSubmit: SubmitHandler<FormData> = async data => {
+
+        try {
+            const schema = Yup.object().shape({
+                email: Yup.string().email().typeError("").required((<ReturnLanguage pt="Email é necessário" />).props),
+                password: Yup.string().required("deve ter senha"),
+            })
+            await schema.validate(data, {
+                abortEarly: false,
+            })
+
+            // Validation passed
+            console.log(data);
+        } catch (err) {
+            if (err instanceof Yup.ValidationError) {
+                // Validation failed
+                console.log(err.errors);
+            }
+        }
+
+
     }
 
     return (
@@ -39,7 +59,7 @@ export default function Login() {
 
                         <LoginStyle.StyledTextInput name="password" type={"password"} placeholder={"Password"} top={7} />
 
-                        <LoginStyle.SubmitButtonLogin>LOGIN</LoginStyle.SubmitButtonLogin>
+                        <LoginStyle.SubmitButtonLogin >LOGIN</LoginStyle.SubmitButtonLogin>
                     </LoginStyle.StyledForm>
 
                 </LoginStyle.Body>

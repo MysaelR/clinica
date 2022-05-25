@@ -6,6 +6,8 @@ interface Props {
   name: string
   label?: string
 }
+
+
 //type InputProps = HtmlHTMLAttributes<HTMLInputElement> & Props;
 type InputProps = JSX.IntrinsicElements['input'] & Props
 
