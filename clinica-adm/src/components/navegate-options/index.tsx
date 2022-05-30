@@ -5,13 +5,14 @@ import * as NavegateOpt from './style';
 
 interface NavegateOptionI {
     language: Language,
-    children: React.ReactNode
+    children: React.ReactNode,
+    onClickOption?: () => void
 }
 
-const NavegateOption: React.FC<NavegateOptionI> = ({ language, children }) => {
+const NavegateOption: React.FC<NavegateOptionI> = ({ language, children, onClickOption }) => {
 
     return (
-        <NavegateOpt.ContainerNavegateOption>
+        <NavegateOpt.ContainerNavegateOption onClick={onClickOption}>
             {children}
             <NavegateOpt.ImageNavegateOption />
             <NavegateOpt.ImageNavegateOption />

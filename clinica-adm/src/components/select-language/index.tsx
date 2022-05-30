@@ -53,10 +53,6 @@ const ReturnLanguage: React.FC<Language> = ({ pt, en, es, de, fr, it }) => {
 
 
 
-
-
-
-
     return (
         <p>
             {selectedLanguage}

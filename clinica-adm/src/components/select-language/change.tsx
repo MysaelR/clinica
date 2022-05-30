@@ -3,9 +3,18 @@ import { useLanguage, LanguageActions } from "../../contexts/multi-languages/lan
 import { Translate } from "phosphor-react";
 import * as ChangeLanguage from "./style";
 
+interface SelectLanguageI {
 
+    topPt: number,
+    topEn: number,
+    topEs: number,
+    topFr: number,
+    topIt: number,
+    topDe: number
 
-export default function SelectLanguage() {
+}
+
+const SelectLanguage: React.FC<SelectLanguageI> = ({ topPt, topEn, topEs, topFr, topIt, topDe }) => {
     const [languageVisible, setLanguageVisible] = useState(false);
     const { dispatch } = useLanguage();
 
@@ -55,7 +64,7 @@ export default function SelectLanguage() {
             </ChangeLanguage.ContainerDropLanguage>
             <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                top={3}
+                top={topPt}
                 onClick={() => { handleSetLanguagePt() }}>
                 <p>
                     PT
@@ -63,7 +72,7 @@ export default function SelectLanguage() {
             </ChangeLanguage.DropLanguage>
             <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                top={7}
+                top={topEn}
                 onClick={() => { handleSetLanguageEn() }}
             >
                 <p>
@@ -72,7 +81,7 @@ export default function SelectLanguage() {
             </ChangeLanguage.DropLanguage >
             <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                top={11}
+                top={topEs}
                 onClick={() => { handleSetLanguageEs() }}
             >
                 <p>
@@ -81,7 +90,7 @@ export default function SelectLanguage() {
             </ChangeLanguage.DropLanguage>
             <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                top={15}
+                top={topFr}
                 onClick={() => { handleSetLanguageFr() }}
             >
                 <p>
@@ -90,7 +99,7 @@ export default function SelectLanguage() {
             </ChangeLanguage.DropLanguage>
             <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                top={19}
+                top={topIt}
                 onClick={() => { handleSetLanguageIt() }}
             >
                 <p>
@@ -99,7 +108,7 @@ export default function SelectLanguage() {
             </ChangeLanguage.DropLanguage>
             <ChangeLanguage.DropLanguage
                 display={languageVisible}
-                top={23}
+                top={topDe}
                 onClick={() => { handleSetLanguageDe() }}
             >
                 <p>
@@ -112,3 +121,5 @@ export default function SelectLanguage() {
 
     )
 }
+
+export default SelectLanguage;

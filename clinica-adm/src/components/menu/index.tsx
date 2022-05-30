@@ -8,12 +8,15 @@ import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { ToogleActions, useToogle } from "../../contexts/toogle-theme/toogle";
 import { MarginSpaceStyle } from "../../styles/global";
 import ReturnLanguage from "../select-language";
+import { useNavigate } from "react-router-dom";
 
 
 
 
 
 export default function Menu() {
+
+    const navegate = useNavigate();
 
     const { stateToogle, dispatch } = useToogle();
 
@@ -44,7 +47,7 @@ export default function Menu() {
             </Nav.LogoContainer>
 
             <Nav.MenuOptions>
-                <Nav.Option>
+                <Nav.Option onClick={() => navegate("/home")}>
 
                     <House size={32} id="image-option" />
 
@@ -53,7 +56,7 @@ export default function Menu() {
                     </Nav.DescriptionOption>
                 </Nav.Option>
 
-                <Nav.Option>
+                <Nav.Option onClick={() => navegate("/medicines")}>
 
                     <Pill size={32} id="image-option" />
 
@@ -62,7 +65,7 @@ export default function Menu() {
                     </Nav.DescriptionOption>
                 </Nav.Option>
 
-                <Nav.Option>
+                <Nav.Option onClick={() => navegate("/files")}>
 
                     <AddressBook size={32} id="image-option" />
 

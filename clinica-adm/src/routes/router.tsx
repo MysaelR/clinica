@@ -1,7 +1,10 @@
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Menu from "../components/menu";
+import Files from "../pages/files";
 import Home from "../pages/home";
 import Login from "../pages/login";
+import Medicines from "../pages/medicines";
+import AddMedicines from "../pages/medicines-add";
 
 
 export const Router = () => {
@@ -19,6 +22,21 @@ export const Router = () => {
                 (<> <Menu />
                     <Routes>
                         <Route path="/home" element={<Home />} />
+
+                        <Route path="medicines">
+                            <Route
+                                index
+                                element={<Medicines />}
+                            />
+                            <Route
+                                path="add"
+                                element={<AddMedicines />}
+                            />
+
+
+                        </Route>
+
+                        <Route path="/files" element={<Files />} />
                     </Routes></>)
 
 
