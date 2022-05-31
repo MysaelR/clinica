@@ -12,13 +12,13 @@ export default function Files() {
     return (
         <Theme>
             <NavegateOption
-                language={{ pt: "Registrar Paciente", en: "Medicines", es: "Medicamentos", fr: "Médicaments", it: "Medicinali", de: "Medikamente" }}
+                language={{ pt: "Registrar Paciente", en: "Register Patient", es: "Medicamentos", fr: "Médicaments", it: "Medicinali", de: "Medikamente" }}
             >
                 <FilePlus weight="regular" className="navegate-opt-icon" />
             </NavegateOption>
 
             <NavegateOption
-                language={{ pt: "Buscar Paciente", en: "Medicines", es: "Medicamentos", fr: "Médicaments", it: "Medicinali", de: "Medikamente" }}
+                language={{ pt: "Buscar Paciente", en: "Search Patient", es: "Medicamentos", fr: "Médicaments", it: "Medicinali", de: "Medikamente" }}
             >
                 <FileSearch weight="regular" className="navegate-opt-icon" />
             </NavegateOption>
