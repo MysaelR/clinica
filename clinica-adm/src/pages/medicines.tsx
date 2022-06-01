@@ -20,6 +20,7 @@ export default function Medicines() {
             </NavegateOption>
 
             <NavegateOption
+                onClickOption={() => navegate('/medicines/show')}
                 language={{ pt: "Ver", en: "Medicines", es: "Medicamentos", fr: "Médicaments", it: "Medicinali", de: "Medikamente" }}
             >
                 <PresentationChart className="navegate-opt-icon" weight="bold" />

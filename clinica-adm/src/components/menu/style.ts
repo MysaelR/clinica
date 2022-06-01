@@ -57,6 +57,7 @@ export const MenuContainer = styled.div`
     width: 3vw;
     background-color:  ${({ theme }) => theme.menuContainerTheme};
     border-right: 2px solid ${({ theme }) => theme.borderContainerTheme};
+    z-index: 3;
 
     :hover{
         transition: 0.2s ease-in; //Aumentar valor para melhorar o menu

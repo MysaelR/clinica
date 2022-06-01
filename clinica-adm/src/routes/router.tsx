@@ -5,6 +5,7 @@ import Home from "../pages/home";
 import Login from "../pages/login";
 import Medicines from "../pages/medicines";
 import AddMedicines from "../pages/medicines-add";
+import ShowMedicines from "../pages/medicines-show";
 
 
 export const Router = () => {
@@ -31,6 +32,10 @@ export const Router = () => {
                             <Route
                                 path="add"
                                 element={<AddMedicines />}
+                            />
+                            <Route
+                                path="show"
+                                element={<ShowMedicines />}
                             />
 
 

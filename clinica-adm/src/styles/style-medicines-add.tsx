@@ -11,6 +11,7 @@ export const PrincipalDivAddMedicines = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
 `
 
 export const ContainerAddMedicines = styled.div`
