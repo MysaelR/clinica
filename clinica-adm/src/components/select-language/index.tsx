@@ -9,11 +9,12 @@ export interface Language {
     fr?: string | any;
     de?: string | any;
     it?: string | any;
+    text?: string | number;
 }
 
 
 
-const ReturnLanguage: React.FC<Language> = ({ pt, en, es, de, fr, it }) => {
+const ReturnLanguage: React.FC<Language> = ({ pt, en, es, de, fr, it, text }) => {
 
     const { stateLanguage } = useLanguage();
     const [selectedLanguage, setSelectedLanguage] = useState(pt);
@@ -55,6 +56,7 @@ const ReturnLanguage: React.FC<Language> = ({ pt, en, es, de, fr, it }) => {
 
     return (
         <p>
+            {text && text}
             {selectedLanguage}
         </p>
 
