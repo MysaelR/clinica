@@ -30,19 +30,32 @@ export const HeaderMedicineInformation = styled.div`
     color: #123A4D;
     padding-top: 0.5vw;
     padding-bottom: 0.5vw;
-    min-height: 50px;
+    min-height: 20px;
     text-align: center;
+
+
+`
+
+export const TextHeaderMedicineInformation = styled.p`
+    font-size: 15px;
+   
+
+    @media only screen and (min-width: 2000px) {
+        font-size: 30px;
+    } 
+    
+
 `
 
 
 export const ContentMedicineInformation = styled.div`
     position: absolute;
-    margin-top: 4vh;
+    margin-top: 4.5vh;
     /* margin-top: min(45px) max(50px); */
     width: 100%;
     height: 16vh;
 
-    background-color: lightblue;
+    /* background-color: lightblue; */
     display: grid;
 
     @media only screen and (max-height: 700px) {
@@ -63,13 +76,30 @@ export const ElementGroupContentMedicineInformation = styled.div`
 
 export const TextElementGroupContentMedicineInformation = styled.p`
     margin-left: 3%;
-    font-size: 0.6vw;
+    font-size: 9px;
     color: #123A4D;
+    
     font-weight: bold;
     position: absolute;
-    width: 8vw;
-    max-width: 8vw;
+    width: 50%;
+   
     /* background-color: red; */
+
+
+    @media only screen and (max-width: 500px) {
+        font-size: 9px;
+    } 
+
+    @media only screen and (min-width: 1500px) {
+        font-size: 9px;
+    }
+
+    @media only screen and (min-width: 2000px) {
+        font-size: 12px;
+    } 
+    @media only screen and (min-width: 3000px) {
+        font-size: 20px;
+    } 
 `
 export const InformationElementGroupContentMedicineInformation = styled.div`
     position: absolute;
@@ -78,11 +108,28 @@ export const InformationElementGroupContentMedicineInformation = styled.div`
     border-radius: 15px 0  0 15px ;
     align-content: flex-end;
     right: 0;
-    width: 6vw;
-    height: 1.2vw;
-    max-width: 7vw;
-    font-size: 0.8vw;
+    width: 40%;
+    padding-top: 0.6vh;
+    padding-bottom: 0.6vh;
+    
+    font-size: 9px;
     align-items: center;
+
+    @media only screen and (max-width: 500px) {
+        font-size: 9px;
+    } 
+
+    @media only screen and (min-width: 1500px) {
+        font-size: 9px;
+    }
+
+    @media only screen and (min-width: 2000px) {
+        font-size: 12px;
+    } 
+
+    @media only screen and (min-width: 3000px) {
+        font-size: 20px;
+    } 
 `
 
 

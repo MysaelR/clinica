@@ -8,7 +8,10 @@ const MedicineInformation: React.FC = () => (
 
     <MedicineInformationStyle.ContainerMedicineInformation>
         <MedicineInformationStyle.HeaderMedicineInformation>
-            DIPORONA
+            <MedicineInformationStyle.TextHeaderMedicineInformation>
+                DIPORONA
+            </MedicineInformationStyle.TextHeaderMedicineInformation>
+
         </MedicineInformationStyle.HeaderMedicineInformation>
 
 
