@@ -61,6 +61,10 @@ export const ContentMedicineInformation = styled.div`
     @media only screen and (max-height: 700px) {
         height: 20vh;
     } 
+    @media only screen and (max-width: 400px) {
+        margin-top: 6vh;
+        
+    } 
 
     
 `

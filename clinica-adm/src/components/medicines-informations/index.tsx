@@ -3,13 +3,23 @@ import ReturnLanguage from "../select-language";
 import * as MedicineInformationStyle from './style';
 
 
+interface Medicine {
+    name: string;
+    batch: string; //lote
+    quantity: number; 
+    due_date: Date; //data de vencimaneto
+    days_to_alert: number;
+    quantity_to_alert: number;
+}
+
+//{name, batch, quantity, due_date, days_to_alert, quantity_to_alert}
 
 const MedicineInformation: React.FC = () => (
 
     <MedicineInformationStyle.ContainerMedicineInformation>
         <MedicineInformationStyle.HeaderMedicineInformation>
             <MedicineInformationStyle.TextHeaderMedicineInformation>
-                DIPORONA
+                Dipirona
             </MedicineInformationStyle.TextHeaderMedicineInformation>
 
         </MedicineInformationStyle.HeaderMedicineInformation>
