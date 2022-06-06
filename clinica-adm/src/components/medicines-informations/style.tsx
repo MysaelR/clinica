@@ -2,6 +2,10 @@ import styled, { css } from "styled-components";
 
 
 
+interface Active {
+    active?: boolean;
+}
+
 export const ContainerMedicineInformation = styled.div`
 
     position: relative;
@@ -21,7 +25,7 @@ export const ContainerMedicineInformation = styled.div`
     
 `
 
-export const HeaderMedicineInformation = styled.div`
+export const HeaderMedicineInformation = styled.div<Active>`
     position: absolute;
     top: 0;
     width: 100%;
@@ -32,6 +36,13 @@ export const HeaderMedicineInformation = styled.div`
     padding-bottom: 0.5vw;
     min-height: 20px;
     text-align: center;
+
+    ${(props) => props.active === true && css`
+        background-color: #C02B2B;
+        color: #FFF;
+    `}
+
+
 
 
 `
