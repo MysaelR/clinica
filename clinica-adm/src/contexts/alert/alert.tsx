@@ -8,13 +8,13 @@ export type AlertI = {
     visibility: boolean,
     title: string,
     msg: string
-
 }
 
 type Action = {
     type: AlertActions;
     payload: any;
 }
+
 type ContextType = {
     stateAlert: AlertI;
     dispatch: (action: Action) => void;
@@ -30,7 +30,6 @@ const initialData: AlertI = { //dados iniciais
     title: "Teste",
     msg: "testando o app"
 }
-
 
 // Context
 //const AlertContext = createContext<ContextType>({} as ContextType);

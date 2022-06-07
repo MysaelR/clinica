@@ -87,13 +87,14 @@ export const ElementGroupContentMedicineInformation = styled.div`
     margin-top: 2%;
     align-items: center;
 
+
 `
 
 export const TextElementGroupContentMedicineInformation = styled.p`
     margin-left: 3%;
     font-size: 9px;
     color: #123A4D;
-    
+
     font-weight: bold;
     position: absolute;
     width: 50%;
@@ -116,7 +117,7 @@ export const TextElementGroupContentMedicineInformation = styled.p`
         font-size: 20px;
     } 
 `
-export const InformationElementGroupContentMedicineInformation = styled.div`
+export const InformationElementGroupContentMedicineInformation = styled.div<Active>`
     position: absolute;
     text-align: center;
     background-color: #28A9E0;
@@ -144,7 +145,12 @@ export const InformationElementGroupContentMedicineInformation = styled.div`
 
     @media only screen and (min-width: 3000px) {
         font-size: 20px;
-    } 
+    }
+
+    ${(props) => props.active === true && css`
+        background-color: #C02B2B;
+        color: #FFF;
+    `}
 `
 
 

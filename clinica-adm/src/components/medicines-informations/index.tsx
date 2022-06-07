@@ -44,73 +44,78 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
     //     });
     //   }
 
+    function getTimeNow() {
+        let getDate = moment().format('DD/MM/yyyy').toString();
+        return getDate
+    }
+
 
 
     useEffect(() => {
-        
+        // let getDate = moment().format('DD/MM/yyyy').toString();
+        let interval = setInterval(() => {
+            let getDate = getTimeNow();
 
-
-        const interval =  setInterval(() => {
-            let getDate = moment().format('DD/MM/yyyy').toString();
-            if(getDate !== undefined && getDate !== dateNow){
+            if (getDate !== undefined && getDate !== dateNow) {
                 setDateNow(getDate);
-                console.log("entrou no if");
-                console.log("getDate: " + getDate);
-                console.log("DateNow: " + dateNow);
-            }else{
-                 console.log("entrou no interval");
+                // console.log("entrou no if");
+                // console.log("getDate: " + getDate);
+                // console.log("DateNow: " + dateNow);
+            } else {
+                // console.log("entrou no else");
                 // console.log(due_date);
-                console.log(dateNow);
+                // console.log(dateNow);
+                // console.log(getDate);
                 // dateDifference && console.log(dateDifference);
                 // console.log(due_date);
             }
-            }, 5000);
+        }, 5000);
 
-            return () => clearInterval(interval);
-    }, [])
+        return () => clearInterval(interval);
+    }, [dateNow])
 
-    // useEffect(() => {
-    //     //Sempre que a data mudar, executa esse useeffect
-    //     //console.log(moment.duration(moment(dataAtual, 'DD/MM/yyyy').diff(end)).asDays())
-    //     //setDateDifference(moment.duration(moment(due, 'DD/MM/yyyy').diff(moment(dateNow, 'DD/MM/yyyy'))).asDays()),
+    useEffect(() => {
+        //Sempre que a data mudar, executa esse useeffect
+        //console.log(moment.duration(moment(dataAtual, 'DD/MM/yyyy').diff(end)).asDays())
+        //setDateDifference(moment.duration(moment(due, 'DD/MM/yyyy').diff(moment(dateNow, 'DD/MM/yyyy'))).asDays()),
 
-    //     setDateDifference(moment.duration(moment(due_date, 'DD/MM/yyyy').diff(moment(dateNow, 'DD/MM/yyyy'))).asDays())
-    //     //console.log(moment(due, 'DD/MM/yyyy').fromNow())
-    // }, [dateNow])
+        setDateDifference(moment.duration(moment(due_date, 'DD/MM/yyyy').diff(moment(dateNow, 'DD/MM/yyyy'))).asDays())
+        //console.log(moment(due, 'DD/MM/yyyy').fromNow())
+    }, [dateNow, due_date])
 
+
+    useEffect(() => {
+        // setDue(moment(due_date, "DD/MM/yyyy").format("DD/MM/yyyy"));
+        if (dateDifference <= days_to_alert) {
+            setAlertDays(true);
+        } else {
+            setAlertDays(false);
+        }
+
+    }, [dateDifference])
     /* 
-        useEffect(() => {
-            setDue(moment(due_date, "DD/MM/yyyy").format("DD/MM/yyyy"));
-            if (dateDifference >= days_to_alert) {
-                setAlertDays(true);
-            } else {
-                setAlertDays(false);
-            }
-    
-        }, [dateDifference, due_date])
-    
-        useEffect(() => {
-            if (quantity <= quantity_to_alert) {
-                setAlertQuantity(true);
-            } else {
-                setAlertQuantity(false);
-            }
-        }, [quantity, quantity_to_alert])
-    
-        useEffect(() => {
-            if (alertDays === true || alertQuantity === true) {
-                setAlertName(true);
-            } else {
-                setAlertName(false);
-            }
-        }, [alertDays, alertQuantity])
-     */
+       useEffect(() => {
+           if (quantity <= quantity_to_alert) {
+               setAlertQuantity(true);
+           } else {
+               setAlertQuantity(false);
+           }
+       }, [quantity, quantity_to_alert])
+   
+       useEffect(() => {
+           if (alertDays === true || alertQuantity === true) {
+               setAlertName(true);
+           } else {
+               setAlertName(false);
+           }
+       }, [alertDays, alertQuantity])
+    */
 
 
 
     return (
         <MedicineInformationStyle.ContainerMedicineInformation>
-            <MedicineInformationStyle.HeaderMedicineInformation active={alertName}>
+            <MedicineInformationStyle.HeaderMedicineInformation /* active={alertName} */ active={alertDays}>
                 <MedicineInformationStyle.TextHeaderMedicineInformation >
                     {name} {" Date now: " + dateNow}
                 </MedicineInformationStyle.TextHeaderMedicineInformation>
@@ -121,8 +126,8 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
             <MedicineInformationStyle.ContentMedicineInformation>
 
 
-                <MedicineInformationStyle.ElementGroupContentMedicineInformation>
-                    <MedicineInformationStyle.TextElementGroupContentMedicineInformation>
+                <MedicineInformationStyle.ElementGroupContentMedicineInformation >
+                    <MedicineInformationStyle.TextElementGroupContentMedicineInformation >
 
                         TEMPO PARA VENCER: {alertDays === true ? "days: true" : "days: false"} {alertQuantity === true ? "quantity: true" : "quantity: false"} {"\n dias de diferença: " + dateDifference + "\n" + "dias para alertar: " + days_to_alert}
                     </MedicineInformationStyle.TextElementGroupContentMedicineInformation>
