@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+
 import Menu from "../components/menu";
 import Files from "../pages/files";
 import Home from "../pages/home";
@@ -7,14 +8,13 @@ import Medicines from "../pages/medicines";
 import AddMedicines from "../pages/medicines-add";
 import ShowMedicines from "../pages/medicines-show";
 
-
 export const Router = () => {
     { console.log(window.location.href) }
 
     return (
         <BrowserRouter>
 
-            {window.location.href === 'http://localhost:3000/' ?
+            {window.location.pathname === '/' ?
 
                 (<Routes>
                     <Route path="/" element={<Login />} />

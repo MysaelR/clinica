@@ -1,8 +1,8 @@
 import moment, { now } from "moment";
 import React, { useEffect, useState } from "react";
+
 import ReturnLanguage from "../select-language";
 import * as MedicineInformationStyle from './style';
-
 
 interface Medicine {
     name: string;
@@ -18,31 +18,19 @@ interface Medicine {
 const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_date, days_to_alert, quantity_to_alert }) => {
 
 
+
     const [dateNow, setDateNow] = useState<string>('');
     const [due, setDue] = useState<string>();
     const [dateDifference, setDateDifference] = useState<number>(0);
     const [alertQuantity, setAlertQuantity] = useState<boolean>(false);
     const [alertDays, setAlertDays] = useState<boolean>(false);
-    const [alertName, setAlertName] = useState<boolean>(false);
+    // const [alertName, setAlertName] = useState<boolean>(false);
 
 
 
 
 
-    // var start = moment("22-06-2022", "YYYY-MM-DD");
 
-    //Difference in number of days
-
-    // async function waitUntil(condition) {
-    //     return await new Promise(resolve => {
-    //       const interval = setInterval(() => {
-    //         if (condition) {
-    //           resolve('foo');
-    //           clearInterval(interval);
-    //         };
-    //       }, 1000);
-    //     });
-    //   }
 
     function getTimeNow() {
         let getDate = moment().format('DD/MM/yyyy').toString();
@@ -58,21 +46,21 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
 
             if (getDate !== undefined && getDate !== dateNow) {
                 setDateNow(getDate);
-                // console.log("entrou no if");
-                // console.log("getDate: " + getDate);
-                // console.log("DateNow: " + dateNow);
+                console.log("entrou no if");
+                console.log("getDate: " + getDate);
+                console.log("DateNow: " + dateNow);
             } else {
-                // console.log("entrou no else");
-                // console.log(due_date);
-                // console.log(dateNow);
-                // console.log(getDate);
-                // dateDifference && console.log(dateDifference);
-                // console.log(due_date);
+                console.log("entrou no else");
+                console.log(due_date);
+                console.log(dateNow);
+                console.log(getDate);
+                dateDifference && console.log(dateDifference);
+                console.log(due_date);
             }
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [dateNow])
+    }, [dateNow, days_to_alert])
 
     useEffect(() => {
         //Sempre que a data mudar, executa esse useeffect
@@ -88,34 +76,28 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
         // setDue(moment(due_date, "DD/MM/yyyy").format("DD/MM/yyyy"));
         if (dateDifference <= days_to_alert) {
             setAlertDays(true);
-        } else {
+        } else if (dateDifference > days_to_alert) {
             setAlertDays(false);
         }
 
     }, [dateDifference])
-    /* 
-       useEffect(() => {
-           if (quantity <= quantity_to_alert) {
-               setAlertQuantity(true);
-           } else {
-               setAlertQuantity(false);
-           }
-       }, [quantity, quantity_to_alert])
-   
-       useEffect(() => {
-           if (alertDays === true || alertQuantity === true) {
-               setAlertName(true);
-           } else {
-               setAlertName(false);
-           }
-       }, [alertDays, alertQuantity])
-    */
+
+    useEffect(() => {
+        if (quantity <= quantity_to_alert) {
+            setAlertQuantity(true);
+        } else {
+            setAlertQuantity(false);
+        }
+
+    }, [quantity, quantity_to_alert])
+
+
 
 
 
     return (
         <MedicineInformationStyle.ContainerMedicineInformation>
-            <MedicineInformationStyle.HeaderMedicineInformation /* active={alertName} */ active={alertDays}>
+            <MedicineInformationStyle.HeaderMedicineInformation /* active={alertName} */ active={alertDays || alertQuantity}>
                 <MedicineInformationStyle.TextHeaderMedicineInformation >
                     {name} {" Date now: " + dateNow}
                 </MedicineInformationStyle.TextHeaderMedicineInformation>
@@ -131,8 +113,8 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
 
                         TEMPO PARA VENCER: {alertDays === true ? "days: true" : "days: false"} {alertQuantity === true ? "quantity: true" : "quantity: false"} {"\n dias de diferença: " + dateDifference + "\n" + "dias para alertar: " + days_to_alert}
                     </MedicineInformationStyle.TextElementGroupContentMedicineInformation>
-                    <MedicineInformationStyle.InformationElementGroupContentMedicineInformation>
-                        <ReturnLanguage text={dateDifference ? (dateDifference + " ") : (0 + " ")} pt="DIAS" />
+                    <MedicineInformationStyle.InformationElementGroupContentMedicineInformation active={alertDays}>
+                        <ReturnLanguage text={dateDifference ? (dateDifference + " ") : (0 + " ")} pt="DIAS" en="DAYS" />
                     </MedicineInformationStyle.InformationElementGroupContentMedicineInformation>
                 </MedicineInformationStyle.ElementGroupContentMedicineInformation>
 
@@ -140,7 +122,7 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
                     <MedicineInformationStyle.TextElementGroupContentMedicineInformation>
                         QUANTIDADE RESTANTE:
                     </MedicineInformationStyle.TextElementGroupContentMedicineInformation>
-                    <MedicineInformationStyle.InformationElementGroupContentMedicineInformation>
+                    <MedicineInformationStyle.InformationElementGroupContentMedicineInformation active={alertQuantity}>
                         1500 unidades
                     </MedicineInformationStyle.InformationElementGroupContentMedicineInformation>
                 </MedicineInformationStyle.ElementGroupContentMedicineInformation>
