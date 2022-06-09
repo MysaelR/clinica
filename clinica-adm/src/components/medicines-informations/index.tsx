@@ -18,7 +18,7 @@ interface Medicine {
 const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_date, days_to_alert, quantity_to_alert }) => {
 
 
-    const [dateNow, setDateNow] = useState<string>();
+    const [dateNow, setDateNow] = useState<string>('');
     const [due, setDue] = useState<string>();
     const [dateDifference, setDateDifference] = useState<number>(0);
     const [alertQuantity, setAlertQuantity] = useState<boolean>(false);
@@ -33,16 +33,41 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
 
     //Difference in number of days
 
+    // async function waitUntil(condition) {
+    //     return await new Promise(resolve => {
+    //       const interval = setInterval(() => {
+    //         if (condition) {
+    //           resolve('foo');
+    //           clearInterval(interval);
+    //         };
+    //       }, 1000);
+    //     });
+    //   }
 
-    // setInterval(() => {
-    //     setDateNow(moment().format('DD/MM/yyyy'));
-    //     // console.log(due_date);
-    //     // console.log(dateNow);
-    //     dateDifference && console.log(dateDifference);
-    //     console.log(due_date);
 
-    // }, 1000);
 
+    useEffect(() => {
+        
+
+
+        const interval =  setInterval(() => {
+            let getDate = moment().format('DD/MM/yyyy').toString();
+            if(getDate !== undefined && getDate !== dateNow){
+                setDateNow(getDate);
+                console.log("entrou no if");
+                console.log("getDate: " + getDate);
+                console.log("DateNow: " + dateNow);
+            }else{
+                 console.log("entrou no interval");
+                // console.log(due_date);
+                console.log(dateNow);
+                // dateDifference && console.log(dateDifference);
+                // console.log(due_date);
+            }
+            }, 5000);
+
+            return () => clearInterval(interval);
+    }, [])
 
     // useEffect(() => {
     //     //Sempre que a data mudar, executa esse useeffect
@@ -87,7 +112,7 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
         <MedicineInformationStyle.ContainerMedicineInformation>
             <MedicineInformationStyle.HeaderMedicineInformation active={alertName}>
                 <MedicineInformationStyle.TextHeaderMedicineInformation >
-                    {name}
+                    {name} {" Date now: " + dateNow}
                 </MedicineInformationStyle.TextHeaderMedicineInformation>
 
             </MedicineInformationStyle.HeaderMedicineInformation>
