@@ -95,7 +95,7 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
                 <MedicineInformationStyle.ElementGroupContentMedicineInformation >
                     <MedicineInformationStyle.TextElementGroupContentMedicineInformation >
 
-                        TEMPO PARA VENCER:
+                        <ReturnLanguage pt="TEMPO PARA VENCER:" en="EXPIRATION TIME" es="TIEMPO DE EXPIRACIÓN" fr="DATE D'EXPIRATION" it="DATA DI SCADENZA" de="ABLAUFZEIT" />
                     </MedicineInformationStyle.TextElementGroupContentMedicineInformation>
                     <MedicineInformationStyle.InformationElementGroupContentMedicineInformation active={alertDays}>
                         <ReturnLanguage text={dateDifference ? (dateDifference + " ") : (0 + " ")} pt="DIAS" en="DAYS" />
@@ -104,19 +104,19 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
 
                 <MedicineInformationStyle.ElementGroupContentMedicineInformation>
                     <MedicineInformationStyle.TextElementGroupContentMedicineInformation>
-                        QUANTIDADE RESTANTE:
+                        <ReturnLanguage pt="QUANTIDADE RESTANTE:" en="REMAINING QUANTITY" es="CANTIDAD RESTANTE" fr="QUANTITÉ RESTANTE" it="QUANTITÀ RIMANENTE" de="VERBLEIBENDE MENGE" />
                     </MedicineInformationStyle.TextElementGroupContentMedicineInformation>
                     <MedicineInformationStyle.InformationElementGroupContentMedicineInformation active={alertQuantity}>
-                        1500 unidades
+                        {quantity}
                     </MedicineInformationStyle.InformationElementGroupContentMedicineInformation>
                 </MedicineInformationStyle.ElementGroupContentMedicineInformation>
 
                 <MedicineInformationStyle.ElementGroupContentMedicineInformation>
                     <MedicineInformationStyle.TextElementGroupContentMedicineInformation>
-                        LOTE:
+                        <ReturnLanguage pt="LOTE:" en="BATCH" es="LOTE" fr="LOT" it="LOTTO" de="CHARGE" />
                     </MedicineInformationStyle.TextElementGroupContentMedicineInformation>
                     <MedicineInformationStyle.InformationElementGroupContentMedicineInformation>
-                        15485235496
+                        {batch}
                     </MedicineInformationStyle.InformationElementGroupContentMedicineInformation>
                 </MedicineInformationStyle.ElementGroupContentMedicineInformation>
 

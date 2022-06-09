@@ -1,6 +1,8 @@
 import React from "react";
 
 import MedicineInformation from "../components/medicines-informations";
+import SelectLanguage from "../components/select-language/change";
+import MedicinesData from '../mock-data/medicines.json'
 import { Theme } from "../theme";
 
 export default function ShowMedicines() {
@@ -8,9 +10,16 @@ export default function ShowMedicines() {
 
     return (
 
-        <Theme>
-            <MedicineInformation name="Dipirona" batch="123456" quantity={150} due_date={"10/09/2022"} days_to_alert={60} quantity_to_alert={149} />
+        <Theme><SelectLanguage topPt={3} topEn={7} topEs={11} topFr={15} topIt={19} topDe={23} />
+            {MedicinesData.map((post) =>
+                <MedicineInformation name={post.name} batch={post.batch} quantity={post.quantity} due_date={post.due_date} days_to_alert={post.days_to_alert} quantity_to_alert={post.quantity_to_alert} />
+
+            )}
+
         </Theme>
+
+
+
 
     );
 }
