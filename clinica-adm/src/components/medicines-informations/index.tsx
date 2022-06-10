@@ -28,15 +28,10 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
 
 
 
-
-
-
-
     function getTimeNow() {
         let getDate = moment().format('DD/MM/yyyy').toString();
         return getDate
     }
-
 
 
     useEffect(() => {
@@ -46,29 +41,18 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
 
             if (getDate !== undefined && getDate !== dateNow) {
                 setDateNow(getDate);
-                console.log("entrou no if");
-                console.log("getDate: " + getDate);
-                console.log("DateNow: " + dateNow);
+
             } else {
-                console.log("entrou no else");
-                console.log(due_date);
-                console.log(dateNow);
-                console.log(getDate);
-                dateDifference && console.log(dateDifference);
-                console.log(due_date);
             }
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [dateNow, days_to_alert])
+    }, [dateNow])
 
     useEffect(() => {
-        //Sempre que a data mudar, executa esse useeffect
-        //console.log(moment.duration(moment(dataAtual, 'DD/MM/yyyy').diff(end)).asDays())
-        //setDateDifference(moment.duration(moment(due, 'DD/MM/yyyy').diff(moment(dateNow, 'DD/MM/yyyy'))).asDays()),
 
+        console.log()
         setDateDifference(moment.duration(moment(due_date, 'DD/MM/yyyy').diff(moment(dateNow, 'DD/MM/yyyy'))).asDays())
-        //console.log(moment(due, 'DD/MM/yyyy').fromNow())
     }, [dateNow, due_date])
 
 
@@ -80,7 +64,7 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
             setAlertDays(false);
         }
 
-    }, [dateDifference])
+    }, [dateDifference, days_to_alert])
 
     useEffect(() => {
         if (quantity <= quantity_to_alert) {
@@ -99,7 +83,7 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
         <MedicineInformationStyle.ContainerMedicineInformation>
             <MedicineInformationStyle.HeaderMedicineInformation /* active={alertName} */ active={alertDays || alertQuantity}>
                 <MedicineInformationStyle.TextHeaderMedicineInformation >
-                    {name} {" Date now: " + dateNow}
+                    {name}
                 </MedicineInformationStyle.TextHeaderMedicineInformation>
 
             </MedicineInformationStyle.HeaderMedicineInformation>
@@ -111,7 +95,7 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
                 <MedicineInformationStyle.ElementGroupContentMedicineInformation >
                     <MedicineInformationStyle.TextElementGroupContentMedicineInformation >
 
-                        TEMPO PARA VENCER: {alertDays === true ? "days: true" : "days: false"} {alertQuantity === true ? "quantity: true" : "quantity: false"} {"\n dias de diferença: " + dateDifference + "\n" + "dias para alertar: " + days_to_alert}
+                        TEMPO PARA VENCER:
                     </MedicineInformationStyle.TextElementGroupContentMedicineInformation>
                     <MedicineInformationStyle.InformationElementGroupContentMedicineInformation active={alertDays}>
                         <ReturnLanguage text={dateDifference ? (dateDifference + " ") : (0 + " ")} pt="DIAS" en="DAYS" />
