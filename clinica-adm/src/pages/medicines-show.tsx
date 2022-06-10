@@ -2,7 +2,7 @@ import React from "react";
 
 import MedicineInformation from "../components/medicines-informations";
 import SelectLanguage from "../components/select-language/change";
-import MedicinesData from '../mock-data/medicines.json'
+import MedicinesData from '../mock-data/medicines2.json'
 import { Theme } from "../theme";
 
 export default function ShowMedicines() {

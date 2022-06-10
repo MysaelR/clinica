@@ -3,7 +3,7 @@
     "batch": "3226776681",
     "quantity": 340,
     "due_date": "13/09/2022",
-    "days_to_alert": 96,
+    "days_to_alert": 50,
     "quantity_to_alert": 341
   }, {
     "name": "Dipirona",
@@ -13,14 +13,14 @@
     "days_to_alert": 51,
     "quantity_to_alert": 162
   }, {
-    "name": "",
+    "name": "Neosaldina",
     "batch": "9426961887",
     "quantity": 453,
     "due_date": "30/09/2022",
     "days_to_alert": 50,
     "quantity_to_alert": 119
   }, {
-    "name": "Kanlam",
+    "name": "Novalgina",
     "batch": "2009344545",
     "quantity": 366,
     "due_date": "02/08/2022",
