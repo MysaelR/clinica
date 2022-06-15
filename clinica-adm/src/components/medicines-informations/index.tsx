@@ -98,7 +98,7 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
                         <ReturnLanguage pt="TEMPO PARA VENCER:" en="EXPIRATION TIME" es="TIEMPO DE EXPIRACIÓN" fr="DATE D'EXPIRATION" it="DATA DI SCADENZA" de="ABLAUFZEIT" />
                     </MedicineInformationStyle.TextElementGroupContentMedicineInformation>
                     <MedicineInformationStyle.InformationElementGroupContentMedicineInformation active={alertDays}>
-                        <ReturnLanguage text={dateDifference ? (dateDifference + " ") : (0 + " ")} pt="DIAS" en="DAYS" />
+                        <ReturnLanguage text={dateDifference ? (dateDifference + " ") : (0 + " ")} pt="DIAS" en="DAYS" es="DÍAS" it="GIORNI" fr="JOURNÉES" de="TAGE" />
                     </MedicineInformationStyle.InformationElementGroupContentMedicineInformation>
                 </MedicineInformationStyle.ElementGroupContentMedicineInformation>
 

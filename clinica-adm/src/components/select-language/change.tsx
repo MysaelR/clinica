@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { useLanguage, LanguageActions } from "../../contexts/multi-languages/languages";
 import { Translate } from "phosphor-react";
+import React, { useState } from "react";
+
+import { LanguageActions, useLanguage } from "../../contexts/multi-languages/languages";
 import * as ChangeLanguage from "./style";
 
 interface SelectLanguageI {
@@ -60,7 +61,7 @@ const SelectLanguage: React.FC<SelectLanguageI> = ({ topPt, topEn, topEs, topFr,
 
         <div>
             <ChangeLanguage.ContainerDropLanguage onClick={() => { setLanguageVisible(!languageVisible) }}>
-                <Translate size={32} id="translate" />
+                <Translate id="translate" fill="#current" />
             </ChangeLanguage.ContainerDropLanguage>
             <ChangeLanguage.DropLanguage
                 display={languageVisible}

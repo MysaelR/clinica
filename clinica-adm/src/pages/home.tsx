@@ -1,12 +1,11 @@
-import { AddressBook, House, Pill } from "phosphor-react";
-import React from "react";
-import { useNavigate } from "react-router-dom";
-
 import NavegateOption from "../components/navegate-options";
 import ReturnLanguage from "../components/select-language";
 import SelectLanguage from "../components/select-language/change";
 import * as HomeStyle from '../styles/style-home';
 import { Theme } from "../theme";
+import { AddressBook, House, Pill } from "phosphor-react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
 
@@ -18,7 +17,6 @@ export default function Home() {
                 <NavegateOption
                     onClickOption={() => navegate('/medicines')}
                     language={{ pt: "Medicamentos", en: "Medicines", es: "Medicamentos", fr: "Médicaments", it: "Medicinali", de: "Medikamente" }}
-
                 >
                     <Pill className="navegate-opt-icon" />
                 </NavegateOption>

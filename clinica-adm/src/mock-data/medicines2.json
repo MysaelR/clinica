@@ -1,6 +1,6 @@
 [{
     "id": 1,
-    "name": "Kristien",
+    "name": "Benzetacil",
     "batch": "20-519-4002",
     "quantity": 289,
     "due_date": "27/08/2022",
@@ -8,7 +8,7 @@
     "quantity_to_alert": 58
   }, {
     "id": 2,
-    "name": "Myles",
+    "name": "Dipirona",
     "batch": "33-064-9241",
     "quantity": 68,
     "due_date": "27/10/2022",
@@ -16,7 +16,7 @@
     "quantity_to_alert": 67
   }, {
     "id": 3,
-    "name": "Tobe",
+    "name": "Neosaldina",
     "batch": "54-052-8017",
     "quantity": 246,
     "due_date": "22/07/2022",
@@ -24,7 +24,7 @@
     "quantity_to_alert": 33
   }, {
     "id": 4,
-    "name": "Emelen",
+    "name": "Novalgina",
     "batch": "49-519-9546",
     "quantity": 251,
     "due_date": "06/11/2022",
