@@ -1,8 +1,8 @@
+import { Form } from '@unform/web';
 import styled from "styled-components";
+
 import { ReactComponent as Logo } from '../assets/menu/logo climed.svg';
 import TextInput from "../components/input/text";
-import { Form } from '@unform/web';
-
 
 interface InputControllI {
     top?: number

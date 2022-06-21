@@ -1,7 +1,5 @@
 import styled, { css } from "styled-components";
 
-
-
 interface Active {
     active?: boolean;
 }
@@ -30,8 +28,8 @@ export const HeaderMedicineInformation = styled.div<Active>`
     top: 0;
     width: 100%;
     border-radius: 15px 15px 0 0;
-    background-color: #28A9E0;
-    color: #123A4D;
+    background-color: ${({ theme }) => theme.navageOptionDesableTheme};
+    color: ${({ theme }) => theme.navegateOptionsIconsAndTextDesable};
     padding-top: 0.5vw;
     padding-bottom: 0.5vw;
     min-height: 20px;
@@ -75,6 +73,10 @@ export const ContentMedicineInformation = styled.div`
     @media only screen and (max-width: 400px) {
         margin-top: 6vh;
         
+    }
+    @media only screen and (max-width: 920px) and (max-height: 450px) {
+        margin-top: 10vh;
+        height: 30vh;
     } 
 
     
@@ -116,6 +118,7 @@ export const TextElementGroupContentMedicineInformation = styled.p`
     @media only screen and (min-width: 3000px) {
         font-size: 20px;
     } 
+
 `
 export const InformationElementGroupContentMedicineInformation = styled.div<Active>`
     position: absolute;
@@ -166,13 +169,47 @@ export const ButtonsContainerMedicineInformation = styled.div`
     bottom: 0;
     /* background-color: lightblue; */
     width: 100%;
-    height: 5vh;
+    height: 4vh;
     display: flex;
+    align-items: center;
+justify-content: center;
+
+
+
+    @media only screen and (max-width: 900px) and (max-height: 450px) {
+
+        height: 10vh;
+    } 
 
 /* 
     @media only screen and (max-width: 1600px) {
         height: 1vh;
     } */
 
+`
+export const ButtonRemoveMedicineContainerMedicineInformation = styled.button`
+    width: 43%;
+    height: 60%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 
+    margin-right: 2%;
+    background-color: #123A4D;
+    font-size: 0.7vh;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-weight: bolder; */
+    color: white;
+
+`
+export const ButtonChangeDataMedicineContainerMedicineInformation = styled.button`
+    width: 43%;
+    margin-left: 2%;
+    cursor: pointer;
+    border: 2px solid #123A4D;
+    height: 60%;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 0.7vh;
 `

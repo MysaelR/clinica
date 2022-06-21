@@ -131,8 +131,9 @@ export const DropLanguage = styled.div<ChangeLanguageButtonI>`
         @media only screen and (max-width: 1100px) {
        font-size: 2vh;
     }
-   
-
+    @media only screen and (max-width: 920px) and (max-height: 450px) {
+        font-size: 5vh;
+    } 
        
     }
     

@@ -126,7 +126,12 @@ const MedicineInformation: React.FC<Medicine> = ({ name, batch, quantity, due_da
 
 
             <MedicineInformationStyle.ButtonsContainerMedicineInformation>
-
+                <MedicineInformationStyle.ButtonRemoveMedicineContainerMedicineInformation>
+                    RETIRAR MEDICAMENTO
+                </MedicineInformationStyle.ButtonRemoveMedicineContainerMedicineInformation>
+                <MedicineInformationStyle.ButtonChangeDataMedicineContainerMedicineInformation>
+                    ALTERAR DADOS
+                </MedicineInformationStyle.ButtonChangeDataMedicineContainerMedicineInformation>
             </MedicineInformationStyle.ButtonsContainerMedicineInformation>
         </MedicineInformationStyle.ContainerMedicineInformation>
     );
