@@ -36,6 +36,10 @@ export const ContainerDropLanguage= styled.div`
         }
     }
 
+    @media only screen and (max-width: 1500px) {
+        width: 3.2vw;
+        height: 3.2vw;
+    }
 
 
     @media only screen and (max-width: 1100px) {

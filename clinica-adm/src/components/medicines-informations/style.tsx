@@ -163,10 +163,10 @@ export const InformationElementGroupContentMedicineInformation = styled.div<Acti
 export const ButtonsContainerMedicineInformation = styled.div`
     position: absolute;
     /* margin-top: 9.4vw;  //9.4 */
-    margin-top: 20vh;
-    /* background-color: lightcyan; */
+    bottom: 0;
+    /* background-color: lightblue; */
     width: 100%;
-    height: 4vh;
+    height: 5vh;
     display: flex;
 
 /* 
