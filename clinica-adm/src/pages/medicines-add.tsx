@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 
 import ReturnLanguage from '../components/select-language';
 import SelectLanguage from '../components/select-language/change';
+import { addMedicineData } from '../services/medicines';
 import { Theme } from '../theme';
 
 interface FormDataSubmitMedicine {
@@ -71,13 +72,32 @@ export default function AddMedicines() {
     const formRef = useRef<FormHandles>(null);
     let navegate = useNavigate();
 
+    async function handleAddMedicine() {
+        try {
+            await addMedicineData({
+                batch: 'AABB05-8745AD',
+                days_to_alert: 50,
+                due_date: '18/11/2022',
+                name: 'Teste do ADD - 03',
+                quantity: 800,
+                quantity_to_alert: 120,
+            });
+        }
+        catch (error) {
+            console.log(error)
+        }
+    }
 
 
     const handleSubmit: SubmitHandler<FormDataSubmitMedicine> = async data => {
 
         try {
             const schema = Yup.object().shape({
-                name: Yup.string().typeError("").required(),
+                name: Yup.string().typeError("").required().min(4),
+                batch: Yup.string().required(),
+                days_to_alert: Yup.number().required().min(15).max(290).integer().positive(),
+                quantity_to_alert: Yup.number().required().min(15).max(9000).integer().positive(),
+                due_date: Yup.date().required()
 
             })
             await schema.validate(data, {
